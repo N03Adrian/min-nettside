@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Hent lagrede materialer fra localStorage
     let materials = JSON.parse(localStorage.getItem('materials')) || [];
 
-    // Vis materialer i lagerlisten
+    // Funksjon for å vise lagerstatus
     function displayInventory() {
         inventoryList.innerHTML = '';
         materials.forEach((material, index) => {
