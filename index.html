@@ -3,10 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adrian</title>
+    <title>Lagerbeholdning</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Hei på deg!</h1>
-    <p>Her kommer det noe spennende.</p>
+    <header>
+        <h1>Lagerbeholdning</h1>
+    </header>
+
+    <main>
+        <!-- Legg til materialer -->
+        <section>
+            <h2>Legg til materialer</h2>
+            <form id="materialForm">
+                <label for="materialName">Materiale:</label>
+                <input type="text" id="materialName" required>
+                <label for="quantity">Antall:</label>
+                <input type="number" id="quantity" required>
+                <button type="submit">Legg til</button>
+            </form>
+        </section>
+
+        <!-- Beholdning og Uttak -->
+        <section>
+            <h2>Beholdning og Uttak</h2>
+            <label for="materialSelect">Velg materiale:</label>
+            <select id="materialSelect"></select>
+
+            <form id="withdrawForm">
+                <label for="withdrawQuantity">Uttak:</label>
+                <input type="number" id="withdrawQuantity" required>
+                <button type="submit">Uttak</button>
+            </form>
+
+            <h3>Lagerstatus:</h3>
+            <ul id="inventoryList"></ul>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
 </body>
 </html>
